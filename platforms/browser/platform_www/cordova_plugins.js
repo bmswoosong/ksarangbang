@@ -653,8 +653,7 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.2",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-push": "1.9.2",
-    "cordova-plugin-sim": "1.3.3",
-    "cordova-plugin-inapppurchase": "1.1.0"
+    "cordova-plugin-sim": "1.3.3"
 }
 // BOTTOM OF METADATA
 });

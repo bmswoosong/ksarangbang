@@ -16,9 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
-
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -48,13 +45,11 @@ var app = {
        
         console.log('Received Event: ' + id);
        
-      
-
         app.onmain();
-
-
     },
     onmain : function() {
+         // main_show();
+          
     var reg_id=device.uuid;
        // 기기 번호 검출 
 
@@ -62,7 +57,7 @@ var app = {
 
           push = PushNotification.init({
     android: {
-        senderID: "870999976688"
+        senderID: "660804254402"
     },
     browser: {
         pushServiceURL: 'http://push.api.phonegap.com/v1/push'
@@ -83,26 +78,14 @@ var app = {
 
 push.on('registration', function(data) {
     console.log(data.registrationId);
-
-
-
-
-  
-     main_show();
-     inapp();
-
+    
+   
 });
 
 push.on('notification', function(data) {
   // alert(data.message);
-  var title=data.title;
-  if (title=="ku4h전체공지"){
-alert_msg(title,data.message);  
-} else {
+ // display_call_info(data.message);
     modal = UIkit.modal.blockUI(data.message); 
-}
-  //display_call_info(data.message);
-    
        setTimeout(function(){ modal.hide() }, 1000)
  
   //alert_msg("알람",data.message);
@@ -117,22 +100,13 @@ push.on('error', function(e) {
     alert_msg("경고",e.message);
 });
 
-   
+    
        
 }
 };
 
 
-function inapp() {
-    inAppPurchase.buy('com.ku4h.atopynews1')
-  .then(function (data) {
-    // ...then mark it as consumed: 
-    return inAppPurchase.consume(data.productType, data.receipt, data.signature);
-  })
-  .then(function () {
-    console.log('product was successfully consumed!');
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
-}
+
+ 
+
+

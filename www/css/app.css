@@ -129,3 +129,24 @@ h1 {
     padding:5px;
     color:#000;
 }
+
+
+
+#today > section {background:#fff; letter-spacing:-0.75px}
+#today > section dl > dt {background:#a50102; color:#fff; font-size:16px; font-weight:400; text-align:center; padding:15px 10px}
+#today > section dl > dd {background:#fff; color:#cf000d; font-size:18px; font-weight:700; text-align:center; padding:25px 10px 25px 10px; line-height:22px}
+#today > section dl > dd > .btn01 {display:block; margin-top:15px}
+#today > section dl > dd > .btn01 > span {background:#464646; color:#fff; font-size:14px; font-weight:700; text-align:center; padding:8px 20px}
+
+/* quick */
+#quick {margin-top:20px; overflow:hidden}
+#quick > section {float:left; width:50%; padding:25% 0% 8% 0%; text-align:center; font-weight:700; box-sizing:border-box; color:#fff; font-size:16px; position:relative}
+#quick > section a.more {position:absolute; width:100%; height:100%; display:block; top:0; left:0; background:#000; opacity:0}
+#quick > section a.more:hover {opacity:0.1}
+#quick > section.quick01 {background:url("image/quick01.png") #898989 50% 30% no-repeat; background-size:32%}
+#quick > section.quick01 a {color:#fff; border-bottom:1px solid #fff}
+#quick > section.quick02 {background:url('image/quick02.png') #ffa500 50% 30% no-repeat; background-size:39%}
+#quick > section.quick03 {background:url('image/quick03.png') #d81159 50% 30% no-repeat; background-size:30%}
+#quick > section.quick04 {background:url('image/quick04.png') #22b1e6 50% 30% no-repeat; background-size:35%}
+
+.btn022 {display:block; background:url('../images/btnArr.png') #a50102 62% 53% no-repeat; color:#fff; font-size:14px; font-weight:700; text-align:center; padding:15px 20px; margin-top:20px; letter-spacing:0}

@@ -249,7 +249,7 @@ chat_page_top();
 }
 
 function close_chat_room() {
-   exit_chat_room();
+  navigator.notification.confirm("대화방을 나가시겠습니까 ?", exit_chat_room, "대화방", "예,아니요"); 
     
 }
 function delete_chat_room() {

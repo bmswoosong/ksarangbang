@@ -27,84 +27,54 @@
 </head>
 
 <body>
-<header class="bar bar-nav">
- <a class="icon icon-gear pull-right"  onclick="open_right();"></a>
+<div id="main_contents" style="overflow-y: scroll; width:100%; height:100%;  padding-bottom: 50px;">
 
-  <h1 class="title">KU4H</h1>
-</header>
-<div id="top_banner" style="height: 40px; ">
+<div class="uk-grid" style="margin-top:5px;">
+  <div class="uk-width-1-2"><img src="image/logo.png" style="width:70%; margin:2%;"><br /><img src="image/logos.png" style="margin:2%"></div>
+  <div class="uk-width-1-2 uk-text-right">지역선도대학육성사업</div>
 </div>
-<div id="main_contents" style="overflow-y: scroll; width:100%; height:100%;  padding-bottom: 100px;">
-</div>
-
-</div>
-<div id="chat_room_modal" class="modal">
-  <header class="bar bar-nav">
-    <a data-uk-modal="{target:'#chat_setup_modal'}" class="icon icon-more-vertical pull-right"></a>
+<div class="uk-grid">
+ <article id="today" class="uk-width-1-1">
+      <section>       
+        <dl>
+          <dt>관용어</dt>
+          <dd>
+            흔들리지 않고 피는 꽃이 어디 있으랴
+            <a href="/proc/engforeign_read.jsp?id=1" class="btn01"><span>자세히 보기</span></a>
+          </dd>
+        </dl>
+      </section>
+    </article>
 
     
-    <h1 class="title">KU4H톡</h1>
-  </header>
+
   
-  <div id="chat_member_modal" class="uk-modal" aria-hidden="true" style="display: none; overflow-y: scroll;">
-                                <div class="uk-modal-dialog">
-                                    <button type="button" class="uk-modal-close uk-close"></button>
-                                    <div class="uk-modal-header">
-                                        <h2>채팅방 참여자</h2>
-                                    </div>
-                                    <p id="chat_member_contents">
-                                      
-                                    </p>
-                                    <div class="uk-modal-footer uk-text-right">
-                                        <button type="button" class="uk-modal-close uk-button">닫기</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-<div id="chat_setup_modal" class="uk-modal" aria-hidden="true" style="display: none; overflow-y: scroll;">
-                                <div class="uk-modal-dialog">
-                                    <button type="button" class="uk-modal-close uk-close"></button>
-                                    <div class="uk-modal-header">
-                                        <h2>채팅방</h2>
-                                    </div>
-                                    <p id="chat_setup_contents">
-                                      <div class="uk-width-1-1 uk-button" onclick='chat_member_list()'>참여자목록</div>
-                                      <div class="uk-width-1-1 uk-button" onclick='find_member()'>초대하기</div>
-                                      <div class="uk-width-1-1 uk-button" onclick="delete_chat_room()" id="delete_chat_room" >대화방삭제</div>
-                                      <div class="uk-width-1-1 uk-button" onclick="close_chat_room()">나가기</div>
-                                    </p>
-                                    <div class="uk-modal-footer uk-text-right">
-                                        <button type="button" class="uk-modal-close uk-button">닫기</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-  <div class="content" style="background-color: #80D5FD;">
-    <div class="uk-grid uk-grid-small" id="chat_body" style="margin-bottom:40px;">
-    
-    
-    
-    </div> <div style="height: 50px;">
- </div>
+</div>
+<img src="image/main.jpg" class="uk-width-1-1">
+<article id="quick">
+      <section class="quick01" style='background:url("image/quick01.png") #898989 50% 30% no-repeat; background-size:32%'>생활 한국어 <a href="/proc/engforeign_list.jsp?s_category_id=1">1</a> / <a href="/proc/engforeign_list.jsp?s_category_id=2">2</a></section>
+      <section class="quick02" style="background:url('image/quick02.png') #ffa500 50% 30% no-repeat; background-size:39%">명언<a href="/proc/engforeign_list.jsp?s_category_id=5" class="more"></a></section>
+      <section class="quick03" style="background:url('image/quick03.png') #d81159 50% 30% no-repeat; background-size:30%">시사 한국어<a href="/proc/engforeign_list.jsp?s_category_id=3" class="more"></a></section>
+      <section class="quick04" style="background:url('image/quick04.png') #22b1e6 50% 30% no-repeat; background-size:35%">관용어<a href="/proc/engforeign_list.jsp?s_category_id=4" class="more"></a></section>
+    </article>
 
-</div><nav class="bar bar-tab">
-  <div class="uk-grid" style="line-height: 40px; width:100%;">
-    <div class="uk-width-7-10 uk-text-center">
- <input type="hidden" name="room_no" value="" id="room_no">
- <textarea class="form-control" placeholder="MESSAGE" id="chat_msg" style="margin-left:10px;" onclick="re_open_chat_room();" cols="30" rows="2"></textarea>
-        
-        </div>
-        <div class="uk-width-3-10 uk-text-right">
-      <a href="#" class="uk-button uk-button-danger uk-button-small" id="send_btn" onclick="save_chat();">전송</a><span class="uk-button uk-button-success uk-button-small" onclick="getImage('1','chat');"><i class="uk-icon-file-image-o"></i></span>
-      </div>
-  </div>
-  </nav>
-  </div> 
+<a href="#self" class="btn022 uk-width-1-1" target="_blank">지역선도대학육성사업단 홈페이지</a>
+</div>
+
+
+
 
 <div id="offcanvas-right" class="uk-offcanvas" aria-hidden="true" >
 
                                 <div class="uk-offcanvas-bar uk-offcanvas-bar-flip" mode="push" id="right_menu">
+ <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
+                                        <li><a href="#" onclick="about_show()">회사소개</a></li>
+                                      
+                                    
 
+                                        <li><a href="#" onclick="exit_show()">종료</a></li>
+                                        
+                                    </ul>
                                    
 
                                 </div>
@@ -257,31 +227,29 @@
     <span class="icon icon-home"></span>
     <span class="tab-label">홈</span>
   </a>
-  <a class="tab-item" href="#" id="board_icon" onclick="freeboard_show() ">
+  <a class="tab-item" href="#" id="board_icon" onclick="photo_show()">
     <span class="icon icon-compose"></span>
-    <span class="tab-label">커뮤니티</span>
+    <span class="tab-label">아토피그램</span>
   </a>
-  <a class="tab-item"  id="chat_icon"  href="#"  onclick="chat_show()">
+    <a class="tab-item" href="#" id="shop_icon" href="#"  onclick="lom_show()">
+    <span class="icon uk-icon-shopping-bag"></span>
+    <span class="tab-label">6-LOM</span>
+  </a>
+   <a class="tab-item"  id="atopy_icon"  href="#"  onclick="atopy_show()">
+    <span class="icon uk-icon-institution"></span>
+    <span class="tab-label">아토피교실</span>
+  </a>
+  <a class="tab-item"  id="chat_icon"  href="#"  onclick="news_show()">
     <span class="icon uk-icon-comments"></span>
-    <span class="tab-label">KU4H톡</span>
+    <span class="tab-label">뉴스</span>
   </a>
-  <a class="tab-item" href="#"  id="photo_icon"  href="#"  onclick="photo_show()">
-    <span class="icon uk-icon-camera"></span>
-    <span class="tab-label">앨범</span>
-  </a>
+
+ 
    <a class="tab-item" href="#" id="shop_icon" href="#"  onclick="shop_show()">
     <span class="icon uk-icon-shopping-bag"></span>
     <span class="tab-label">BIZ</span>
   </a>
-  <a class="tab-item" href="#"  id="blog_icon" href="#"  onclick="blog_show()">
-    <span class="icon icon-pages"></span>
-    <span class="tab-label">학교</span>
-  </a>
-  
-  <a class="tab-item" href="#"  id="exit_icon" href="#"  onclick="exit_show()">
-    <span class="icon uk-icon-close"></span>
-    <span class="tab-label">종료</span>
-  </a>
+ 
 </nav>
      <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>
     <script type="text/javascript" src="js/app.js"></script>

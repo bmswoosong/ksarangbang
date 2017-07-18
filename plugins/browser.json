@@ -70,9 +70,6 @@
         },
         "cordova-plugin-sim": {
             "PACKAGE_NAME": "com.ku4h.atopynews"
-        },
-        "cordova-plugin-inapppurchase": {
-            "PACKAGE_NAME": "com.ku4h.atopynews"
         }
     },
     "dependent_plugins": {

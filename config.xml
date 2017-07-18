@@ -1,7 +1,7 @@
-﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.hangul.atopynews" version="1.2.0">
+﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.hangul.hancoma" version="0.0.1">
   <name>한국어사랑방</name>
   <description>한국어사랑방</description>
-  <author href="http://ku4h.com" email="ch7@daum.net">김대경</author>
+  <author href="http://atopynews.co.kr" email="ch7@daum.net">김대경</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
@@ -27,11 +27,10 @@
   <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2"/>
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
-  <plugin name="cordova-plugin-inapppurchase" source="npm"/>
 <plugin name="cordova-plugin-sim"   source="npm" />
   <preference name="android-build-tool" value="gradle" />
 <plugin name="phonegap-plugin-push" source="npm">
-    <param name="SENDER_ID" value="870999976688" />
+    <param name="SENDER_ID" value="660804254402" />
 </plugin>
 
     
