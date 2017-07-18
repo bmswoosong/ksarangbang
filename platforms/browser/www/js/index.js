@@ -80,7 +80,7 @@ var app = {
 
 push.on('registration', function(data) {
     console.log(data.registrationId);
-    json_call(data.registrationId);
+    //json_call(data.registrationId);
      setTimeout(function() {
       startapp();
       }, 1000);
@@ -112,15 +112,7 @@ push.on('error', function(e) {
     var member_srl = window.localStorage.getItem("member_srl");
 
 function startapp() {
-    console.log("회원번호"+member_srl);
-    if(!member_srl) {
-        console.log("로그인 해주세요.");
-    location.replace('login.html') ;
-    } else {
-        console.log("로그인 되었음.");
-    location.replace('main.html') ;
-        
-    }
+    var ref = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp', '_blank', 'location=yes');
 }
 
 function json_call(reg_id) {

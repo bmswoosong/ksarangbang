@@ -1,6 +1,6 @@
-﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.ku4h.atopynews" version="1.2.0">
-  <name>KU4H</name>
-  <description>KU4H</description>
+﻿<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.hangul.atopynews" version="1.2.0">
+  <name>한국어사랑방</name>
+  <description>한국어사랑방</description>
   <author href="http://ku4h.com" email="ch7@daum.net">김대경</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
