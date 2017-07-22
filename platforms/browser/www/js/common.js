@@ -83,7 +83,17 @@ function main_show() {
             }
         })
 }
+function today_contents() {
+   $.ajax({
+            type:"GET",
+            data: { member_srl : member_srl },
+            url:"http://ku4h.com/topay_hangul.php",
+            success:function(data){
+                $("#today").html(data);
+            }
+        })
 
+}
 function atopy_show() {
    $.ajax({
             type:"GET",
