@@ -30,7 +30,7 @@
 <plugin name="cordova-plugin-sim"   source="npm" />
   <preference name="android-build-tool" value="gradle" />
 <plugin name="phonegap-plugin-push" source="npm">
-    <param name="SENDER_ID" value="660804254402" />
+    <param name="SENDER_ID" value="497366590069" />
 </plugin>
 
     
