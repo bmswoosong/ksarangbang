@@ -4,6 +4,9 @@ var uuid=device.uuid;
 var basic_url="http://atopynews.co.kr/";
 var room_no=0;
 var menu;
+function about() {
+ var ref = cordova.InAppBrowser.open('http://www.cnuconsortium.ac.kr', '_blank', 'location=yes');
+}
 function about_show() {
   var url="https://atopynews.modoo.at/";
   open_url(url);
