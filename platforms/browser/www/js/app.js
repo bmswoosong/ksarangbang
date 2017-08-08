@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var push;
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -57,7 +59,7 @@ var app = {
 
           push = PushNotification.init({
     android: {
-        senderID: "497366590069"
+        senderID: "59571752370"
     },
     browser: {
         pushServiceURL: 'http://push.api.phonegap.com/v1/push'
