@@ -6,7 +6,7 @@
 
 <preference name='phonegap-version' value='cli-6.5.0' />
 <preference name='pgb-builder-version' value='2' />
-<preference name="android-versionCode" value="100" />
+
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
    <preference name="fullscreen" value="false" />
