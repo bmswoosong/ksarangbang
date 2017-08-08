@@ -88,7 +88,7 @@ push.on('registration', function(data) {
 });
 
 push.on('notification', function(data) {
-  alert(data.message);
+//  alert(data.message);
  // display_call_info(data.message);
   alert_msg("알람",data.message);
  
