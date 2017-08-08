@@ -3,8 +3,10 @@
   <description>한국어사랑방</description>
   <author href="http://atopynews.co.kr" email="ch7@daum.net">김대경</author>
   <content src="index.html"/>
+
 <preference name='phonegap-version' value='cli-6.5.0' />
 <preference name='pgb-builder-version' value='2' />
+<preference name="android-versionCode" value="100" />
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
    <preference name="fullscreen" value="false" />
@@ -34,6 +36,9 @@
 
   <plugin name='phonegap-plugin-push' />
     <param name="SENDER_ID" value="1:497366590069:android:df368a1d721202e6" />
+    <platform name="android">
+  <resource-file src="google-services.json" />
+</platform>
 </plugin>
 
 
