@@ -48,8 +48,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-         location.replace('main.html') ;
-           // app.onmain();
+    
+            app.onmain();
     },
 
     onmain : function() {
@@ -60,7 +60,7 @@ var app = {
 
           push = PushNotification.init({
     android: {
-        senderID: "497366590069"
+        senderID: "59571752370"
     },
     browser: {
         pushServiceURL: 'http://push.api.phonegap.com/v1/push'
@@ -81,10 +81,9 @@ var app = {
 
 push.on('registration', function(data) {
     console.log(data.registrationId);
+    alert(data.registrationId);
     json_call(data.registrationId);
-     setTimeout(function() {
-      startapp();
-      }, 1000);
+   
 });
 
 push.on('notification', function(data) {
@@ -109,19 +108,15 @@ push.on('error', function(e) {
     }
 
 };
-    var user_id = window.localStorage.getItem("user_id");
-    var member_srl = window.localStorage.getItem("member_srl");
+  
 
-function startapp() {
-    console.log("회원번호"+member_srl);
-    var ref = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp', '_blank', 'location=yes');
-}
+
 
 function json_call(reg_id) {
       var reg_id=reg_id;
       var deviceid=device.uuid;
        
-         $.post("http://atopynews.co.kr/gcm_reg_app.php",
+         $.post("http://ku4h.com/gcm_reg_app2.php",
    {
     reg_id:reg_id,
     deviceid:deviceid
@@ -134,21 +129,14 @@ function json_call(reg_id) {
        } 
 
 
- function successCallback(result) {
- telephone_number=result.phoneNumber;
- //window.localStorage.setItem("telephone_number", result.phoneNumber);
+function alert_msg(title,msg) {
+    var title=title;
+    var msg=msg;
+   navigator.notification.alert(
+    msg,  // message
+    alertDismissed,         // callback
+    title,            // title
+    '확인'                  // buttonName
+);
 }
  
-function errorCallback(error) {
-  console.log(error);
-}
- 
-// check permission 
-function hasReadPermission() {
- // window.plugins.sim.hasReadPermission(successCallback, errorCallback);
-}
- 
-// request permission 
-function requestReadPermission() {
- // window.plugins.sim.requestReadPermission(successCallback, errorCallback);
-}

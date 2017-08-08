@@ -17,7 +17,7 @@
  * under the License.
  */
  var push;
- 
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -79,8 +79,10 @@ var app = {
 
 
 push.on('registration', function(data) {
-    console.log(data.registrationId);
     
+      json_call(data.registrationId);
+  
+   
    
 });
 
@@ -109,6 +111,30 @@ push.on('error', function(e) {
 
 
 
- 
+ function json_call(reg_id) {
+      var reg_id=reg_id;
+      var deviceid=device.uuid;
+       
+         $.post("http://ku4h.com/gcm_reg_app2.php",
+   {
+    reg_id:reg_id,
+    deviceid:deviceid
+   },
+   function(data){
+    var data;
+    
+   //  alert("ok");
+   })
+       } 
 
 
+function alert_msg(title,msg) {
+    var title=title;
+    var msg=msg;
+   navigator.notification.alert(
+    msg,  // message
+    alertDismissed,         // callback
+    title,            // title
+    '확인'                  // buttonName
+);
+}

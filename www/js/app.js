@@ -79,8 +79,10 @@ var app = {
 
 
 push.on('registration', function(data) {
-    console.log(data.registrationId);
-     json_call(data.registrationId);
+    
+      json_call(data.registrationId);
+  
+   
    
 });
 
@@ -126,3 +128,13 @@ push.on('error', function(e) {
        } 
 
 
+function alert_msg(title,msg) {
+    var title=title;
+    var msg=msg;
+   navigator.notification.alert(
+    msg,  // message
+    alertDismissed,         // callback
+    title,            // title
+    '확인'                  // buttonName
+);
+}
