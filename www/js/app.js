@@ -36,7 +36,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-          document.addEventListener("backbutton", onBackKeyDown, false);
+          document.addEventListener("backbutton", exit_show, false);
        
         app.receivedEvent('deviceready');
         
@@ -137,4 +137,17 @@ function alert_msg(title,msg) {
     title,            // title
     '확인'                  // buttonName
 );
+}
+
+// 종류
+function exit_show() {
+navigator.notification.confirm("종료하시겠습니까? ", onConfirm, "Confirmation", "Yes,No"); 
+}
+
+function onConfirm(button) {
+    if(button==2){//If User selected No, then we just do nothing
+        return;
+    }else{
+        navigator.app.exitApp();// Otherwise we quit the app.
+    }
 }
