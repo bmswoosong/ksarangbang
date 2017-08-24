@@ -115,7 +115,7 @@ push.on('error', function(e) {
       var reg_id=reg_id;
       var deviceid=device.uuid;
        
-         $.post("http://ku4h.com/gcm_reg_app2.php",
+         $.post("https://ent2.wsu.ac.kr/kbang/android/gcm_reg_app2.php",
    {
     reg_id:reg_id,
     deviceid:deviceid

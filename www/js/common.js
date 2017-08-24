@@ -90,7 +90,7 @@ function today_contents() {
    $.ajax({
             type:"GET",
             data: { member_srl : member_srl },
-            url:"http://ku4h.com/topay_hangul.php",
+            url:"https://ent2.wsu.ac.kr/kbang/android/topay_hangul.php",
             success:function(data){
                 $("#today").html(data);
             }
