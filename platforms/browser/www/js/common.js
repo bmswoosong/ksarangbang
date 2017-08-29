@@ -4,8 +4,10 @@ var uuid=device.uuid;
 var room_no=0;
 var menu;
 var ref_main;
+var push_on;
 function main_open() {
- var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp', '_blank', 'location=no');
+  var uuid=device.uuid;
+ var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp?kind=android&push='+push, '_blank', 'location=no');
 
 }
 function about() {
