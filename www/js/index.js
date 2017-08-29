@@ -83,7 +83,7 @@ push.on('registration', function(data) {
     console.log(data.registrationId);
    // alert(data.registrationId);
     json_call(data.registrationId);
-    location.replace('main.html') ;
+    main_open();
    
 });
 

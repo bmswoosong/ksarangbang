@@ -24,7 +24,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#fff;
+   
     
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -132,7 +132,7 @@ h1 {
 
 
 
-#today > section {background:#fff; letter-spacing:-0.75px}
+#today > section {letter-spacing:-0.75px}
 #today > section dl > dt {background:#a50102; color:#fff; font-size:16px; font-weight:400; text-align:center; padding:15px 10px}
 #today > section dl > dd {background:#fff; color:#cf000d; font-size:18px; font-weight:700; text-align:center; padding:25px 10px 25px 10px; line-height:22px}
 #today > section dl > dd > .btn01 {display:block; margin-top:15px}

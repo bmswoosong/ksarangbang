@@ -1,9 +1,13 @@
 var user_id = window.localStorage.getItem("user_id");
 var member_srl = window.localStorage.getItem("member_srl");
 var uuid=device.uuid;
-var basic_url="http://atopynews.co.kr/";
 var room_no=0;
 var menu;
+var ref_main;
+function main_open() {
+ var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp', '_blank', 'location=no');
+
+}
 function about() {
  var ref = cordova.InAppBrowser.open('http://www.cnuconsortium.ac.kr', '_blank', 'location=yes');
 }

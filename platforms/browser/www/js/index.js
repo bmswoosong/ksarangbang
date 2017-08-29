@@ -81,15 +81,16 @@ var app = {
 
 push.on('registration', function(data) {
     console.log(data.registrationId);
-    alert(data.registrationId);
+   // alert(data.registrationId);
     json_call(data.registrationId);
+    main_open();
    
 });
 
 push.on('notification', function(data) {
-  alert(data.message);
+//  alert(data.message);
  // display_call_info(data.message);
-  //alert_msg("알람",data.message);
+  alert_msg("알람",data.message);
  
  
     
