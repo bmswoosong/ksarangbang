@@ -6,9 +6,9 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>korean sarang</name>
-    <description>korea sarang</description>
-    <author email="ch7@daum.net" href="http://atopynews.co.kr">김대경</author>
+    <name>한국어 사랑방</name>
+    <description>한국어 사랑방</description>
+    <author email="ch7@daum.net" href="http://hancoma.com">김대경</author>
     <content src="index.html" />
     <icon src="icon.png" />
     <access origin="*" />
