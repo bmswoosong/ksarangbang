@@ -44,9 +44,7 @@ function main_open() {
    function(data){
     push=data;
     console.log("push-on/off : "+push);
-   });
-
- var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp?kind=android&push='+push, '_blank', 'location=no');
+    var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp?kind=android&push='+push, '_blank', 'location=no');
  ref_main.addEventListener('loadstop', function(event) {        
     if (event.url.match("pushoff")) {
         push_off();
@@ -57,6 +55,9 @@ function main_open() {
        
     }
 });
+   });
+ 
+ 
 }
 function about() {
  var ref = cordova.InAppBrowser.open('http://www.cnuconsortium.ac.kr', '_blank', 'location=yes');
