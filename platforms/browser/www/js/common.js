@@ -5,10 +5,58 @@ var room_no=0;
 var menu;
 var ref_main;
 var push_on;
-function main_open() {
-  var uuid=device.uuid;
- var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp?kind=android&push='+push, '_blank', 'location=no');
+var push;
+function push_on() {
+  var deviceid=device.uuid;
+  var send='y';
+  console.log("pushon");
+  $.post("http://ent2.wsu.ac.kr/kbang/android/push_edit_app.php",
+   {
+    deviceid:deviceid,
+    send:send
+    
+       },
+   function(data){
+   });
 
+}
+function push_off() {
+  var deviceid=device.uuid;
+  var send='n';
+  console.log("pushooff");
+   $.post("http://ent2.wsu.ac.kr/kbang/android/push_edit_app.php",
+   {
+    deviceid:deviceid,
+    send:send
+    
+       },
+   function(data){
+   });
+
+}
+function main_open() {
+  var deviceid=device.uuid;
+  $.post("http://ent2.wsu.ac.kr/kbang/android/push_on_off_app.php",
+   {
+    deviceid:deviceid
+    
+       },
+   function(data){
+    push=data;
+    console.log("push-on/off : "+push);
+   });
+
+ var ref_main = cordova.InAppBrowser.open('http://ksarangbang.wsu.ac.kr/main/index.jsp?kind=android&push='+push, '_blank', 'location=no');
+ ref_main.addEventListener('loadstop', function(event) {        
+    if (event.url.match("pushoff")) {
+        push_off();
+       
+    }
+    if (event.url.match("pushon")) {
+        push_on();
+       
+    }
+});
 }
 function about() {
  var ref = cordova.InAppBrowser.open('http://www.cnuconsortium.ac.kr', '_blank', 'location=yes');
